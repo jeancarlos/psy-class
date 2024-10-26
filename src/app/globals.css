@@ -20,10 +20,43 @@ h1 {
   margin-top: 20px;
 }
 
-iframe {
+iframe, .boxIntro {
   border:none;
+  position: absolute;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: calc(100% + 5px);
+  object-fit: contain;
+  animation: fadeIn 2s;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Optional: Background color */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow */
+  }
+}
+
+.aspect-box {
+  display: block;
+  position: relative;
+  overflow: hidden;
   border-radius: 20px;
   background-color: aqua;
   border:2px solid rgba(0,0,0,1);
   box-shadow: 12px 12px 0px rgba(0,0,0,1);
+  width: 896px;
+  max-width: calc(100vw - 50px);
+  padding-top:calc(56.25% - 3px);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
