@@ -54,8 +54,8 @@ export default function Home() {
             <Tab label="Aula 3" />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}><span className="aspect-box">
-          <Box className="boxIntro" sx={{ p: 3, top: '60px', maxWidth: 'calc(100% - 50px)', textAlign: 'justify', fontSize: '20px' }}>
+        <TabPanel value={value} index={0}><span className="aspect-box intro">
+          <Box className="boxIntro" sx={{ p: 3, maxWidth: 'calc(100% - 50px)', textAlign: 'justify' }}>
           Bem-vindo ao nosso curso sobre Pesquisa de Clima Organizacional!<br /><br />
 
           Neste curso, você irá explorar as ferramentas e técnicas essenciais para avaliar e entender o ambiente de trabalho em qualquer organização.<br /><br />

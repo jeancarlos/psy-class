@@ -30,6 +30,14 @@ iframe, .boxIntro {
   max-height: calc(100% + 5px);
   object-fit: contain;
   animation: fadeIn 2s;
+  font-size: 20px;
+}
+
+.boxIntro {
+  max-height: none;
+  min-height: 404px;
+  padding-top: 76px !important;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +48,11 @@ iframe, .boxIntro {
     right: 0;
     background-color: #fff; /* Optional: Background color */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow */
+  }
+
+  .boxIntro {
+  padding-top: 24!important;
+  font-size: 16px;
   }
 }
 
@@ -54,6 +67,10 @@ iframe, .boxIntro {
   width: 896px;
   max-width: calc(100vw - 50px);
   padding-top:calc(56.25% - 3px);
+}
+
+.aspect-box.intro {
+  padding: 0;
 }
 
 @keyframes fadeIn {
