@@ -47,16 +47,16 @@ export default function Home() {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/5y7j0lRQbAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/5y7j0lRQbAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </TabPanel>
         <TabPanel value={value} index={1}>
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/niXm6oYQArU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/niXm6oYQArU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </TabPanel>
         <TabPanel value={value} index={2}>
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/mCWL-k3JE20"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/mCWL-k3JE20"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </TabPanel>
         <TabPanel value={value} index={3}>
-        <iframe width="1024" height="576" src="https://www.youtube.com/embed/Mo5c1jFU_ds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/Mo5c1jFU_ds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </TabPanel>
       </Box>
     </Grid>
