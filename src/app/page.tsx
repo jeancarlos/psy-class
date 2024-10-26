@@ -1,16 +1,15 @@
 'use client'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Tabs, Tab, Typography, Box, Grid } from '@mui/material';
 
-const TabPanel = (props: any) => {
-  const { children, value, index, ...other } = props;
+const TabPanel = (props: { children: React.ReactNode, value: number, index: number}) => {
+  const { children, value, index} = props;
   return (
     <div
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      {...other}
     >
       {value === index && (
         <Box sx={{ p: 3, pt: 10 }}>
@@ -24,7 +23,7 @@ const TabPanel = (props: any) => {
 export default function Home() {
   const [value, setValue] = useState(0);
 
-  const handleChange = (_:any, value: number) => {
+  const handleChange = (_:unknown, value: number) => {
     setValue(value);
   };
 
