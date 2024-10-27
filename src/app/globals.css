@@ -1,43 +1,73 @@
 :root {
-  --background: #ffffff;
+  --background: #F3F0DF;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #F3F0DF;
   }
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #F3F0DF;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 20px;
+.tabs {
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px #000, 5px 5px 0 2px #000;
 }
 
-iframe, .boxIntro {
+.tabs .MuiButtonBase-root.MuiTab-root {
+  padding-top: 13px;
+  color: #000;
+}
+
+.tabs .MuiTabs-indicator{
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 20px;
+  bottom: -10px;
+  background: #000;
+  z-index: -1;
+}
+
+.tabPanel {
+  max-width: 926px;
+  display: block;
+  margin: 0 auto;
+}
+.slideOut {
+  animation: slideOut 300ms ease-in-out forwards;
+  animation-delay: 1ms;
+}
+
+.slideIn {
+  animation: slideIn 300ms ease-in-out both;
+  animation-delay: 300ms;
+}
+
+.aspect-box iframe, .aspect-box img {
   border:none;
   position: absolute;
-  background-color: aqua;
+  background-color: #84CEC4;
   top: 0;
   left: 0;
   width: 100%;
   max-height: calc(100% + 5px);
-  object-fit: contain;
+  object-fit: fill;
   animation: fadeIn 2s;
   font-size: 20px;
 }
 
-.boxIntro {
-  max-height: none;
-  min-height: 404px;
-  padding-top: 76px !important;
-  position: relative;
+.aspect-box img {
+  filter: hue-rotate(-40deg);
 }
 
 @media (max-width: 768px) {
@@ -46,13 +76,12 @@ iframe, .boxIntro {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #fff; /* Optional: Background color */
+    background-color: #F3F0DF; /* Optional: Background color */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow */
-  }
-
-  .boxIntro {
-  padding-top: 24!important;
-  font-size: 16px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: inset 0 0 0 2px #000;
   }
 }
 
@@ -61,19 +90,41 @@ iframe, .boxIntro {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  background-color: aqua;
+  background-color: #84CEC4;
   border:2px solid rgba(0,0,0,1);
   box-shadow: 12px 12px 0px rgba(0,0,0,1);
-  width: 896px;
+  width: 875px;
   max-width: calc(100vw - 50px);
   padding-top:calc(56.25% - 3px);
 }
 
-.aspect-box.intro {
-  padding: 0;
+.MuiTypography-root li {
+  margin-bottom: 10px;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(-50%) scale(.5);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) scale(2);
+    opacity: 0;
+  }
 }
