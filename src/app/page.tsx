@@ -7,6 +7,7 @@ import ChecklistIcon from '@mui/icons-material/Checklist';
 import PersonIcon from '@mui/icons-material/Person';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import SubTitle from './SubTitle';
+import Player from './Player';
 
 const TabPanel = (props: { children: React.ReactNode, value: number, index: number}) => {
   const { children, value, index} = props;
@@ -96,12 +97,7 @@ export default function Home() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
-        <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2 }}>
-            Introdução ao treinamento
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/5y7j0lRQbAI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
+          <Player title="Introdução ao treinamento" videoUri="5y7j0lRQbAI" />
           <Grid container spacing={2} sx={{ mt: 5}}>
             <Grid item md={6} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">
@@ -125,24 +121,9 @@ export default function Home() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.75rem" fontWeight={700} sx={{ mb: 2}}>
-            Aula 1 - O que é pesquisa de Clima Organizacional.
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/niXm6oYQArU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
-          <Typography variant="h2" component="h2" align="center" fontSize="2.75rem" fontWeight={700} sx={{ mb: 2, mt: 5 }}>
-            Aula 2 - Pesquisa de satisfação ou Pesquisa de Clima.
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/3FbkxUZ_DQ0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
-          <Typography variant="h2" component="h2" align="center" fontSize="2.75rem" fontWeight={700} sx={{ mb: 2, mt: 5 }}>
-            Aula 3 - Objetivo da pesquisa de Clima Organizacional
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/h_rXB3D2fgg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
+        <Player subTitle="Aula 1" title="O que é pesquisa de Clima Organizacional" videoUri="niXm6oYQArU" />
+        <Player subTitle="Aula 2" title="Pesquisa de satisfação ou Pesquisa de Clima" videoUri="3FbkxUZ_DQ0" />
+        <Player subTitle="Aula 3" title="Objetivo da pesquisa de Clima Organizacional" videoUri="h_rXB3D2fgg" />
           <Grid container spacing={2} sx={{ mt: 5}}>
             <Grid item md={7} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">
@@ -163,18 +144,8 @@ export default function Home() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={3}>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2 }}>
-            Aula 1 - Planejamento da pesquisa de Clima Organizacional.
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/sVzpAiQqerY"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2, mt: 5 }}>
-            Aula 2 - Etapas da pesquisa de Clima Organizacional
-          </Typography>
-          <span className="aspect-box">
-            <iframe width="896" height="504" src="https://www.youtube.com/embed/GhNxevWiGWw"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
+          <Player subTitle="Aula 1" title="Planejamento da pesquisa de Clima Organizacional" videoUri="sVzpAiQqerY" />
+          <Player subTitle="Aula 2" title="Etapas da pesquisa de Clima Organizacional" videoUri="GhNxevWiGWw" />
           <Grid container spacing={2} sx={{ mt: 5}}>
             <Grid item md={7} xs={12}  sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">
@@ -197,12 +168,7 @@ export default function Home() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={4}>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2 }}>
-            Aula 1 - Aplicação da Pesquisa de Clima Organizacional.
-          </Typography>
-          <span className="aspect-box">
-          <iframe width="896" height="504" src="https://www.youtube.com/embed/7EuBiJTQk10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
+          <Player subTitle="Aula 1" title="Aplicação da Pesquisa de Clima Organizacional" videoUri="7EuBiJTQk10" />
           <Grid container spacing={2} sx={{ mt: 5}}>
             <Grid item md={7} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">
@@ -223,18 +189,8 @@ export default function Home() {
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={5}>
-        <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2 }}>
-            Aula 1 - Análise e interpretação de resultados.
-          </Typography>
-          <span className="aspect-box">
-          <iframe width="896" height="504" src="https://www.youtube.com/embed/7EuBiJTQk10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2, mt: 5 }}>
-            Aula 2 - Elaboração do Relatório.
-          </Typography>
-          <span className="aspect-box">
-          <iframe width="896" height="504" src="https://www.youtube.com/embed/aaipVIVF-pg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </span>
+          <Player subTitle="Aula 1" title="Análise e interpretação de resultados" videoUri="7EuBiJTQk10" />
+          <Player subTitle="Aula 2" title="Elaboração do Relatório" videoUri="aaipVIVF-pg" />
           <Grid container spacing={2} sx={{ mt: 5}}>
             <Grid item md={7} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">

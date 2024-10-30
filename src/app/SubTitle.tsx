@@ -1,8 +1,7 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import { Typography } from '@mui/material';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
-import zIndex from '@mui/material/styles/zIndex';
 
 export default function SubTitle(props: { children: React.ReactNode }) {
   const sx = {
