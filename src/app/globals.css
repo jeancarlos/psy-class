@@ -113,16 +113,15 @@ body {
   .tabs {
     margin-top: 0;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     background-color: #F3F0DF; /* Optional: Background color */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow */
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: inset 0 0 0 2px #000;
+    border-radius: 0;
+    box-shadow: none;
     z-index: 999;
+    border-bottom: 3px solid #000;
   }
 
   .tabs .MuiButtonBase-root.MuiTab-root {
@@ -143,12 +142,26 @@ body {
   align-items: center;
   gap: 5px;
   min-width: 85px;
+  line-height: 1rem;
+
 }
 
+.subTitle.subTitleIcon {
+  min-width: 16px;
+}
+
+.MuiTypography-root.Title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
 @media (max-width: 768px) {
   .subTitle {
   min-width: 71px;
   font-size: 15px;
+  }
+  .MuiTypography-root.Title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 }
 
