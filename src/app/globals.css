@@ -18,8 +18,47 @@ body {
   font-style: normal;
 }
 
+.tabIcon {
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #000, -1px 5px 0 1px #000;
+  font-size: 32px;
+  z-index: 9999;
+  background: #84CEC4;
+  color: #F3F0DF;
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  transform: rotate(-12deg);
+  margin-left: -417px;
+  z-index: 1001;
+}
+
+.tabIcon2 {
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px!important;
+  box-shadow: inset 0 0 0 2px #000, -1px 5px 0 1px #000;
+  font-size: 32px;
+  z-index: 9999;
+  background: #F3F0DF;
+  color: #84CEC4;
+  position: absolute;
+  left: 50%;
+  top: 73px;
+  transform: rotate(12deg);
+  margin-left: -428px;
+  z-index: 1002;
+}
+
 .tabs {
+  z-index: 999;
+  margin-top: 40px;
   border-radius: 20px;
+  background-color: #F3F0DF;
+  position: relative;
   box-shadow: inset 0 0 0 2px #000, 5px 5px 0 2px #000;
 }
 
@@ -72,6 +111,7 @@ body {
 
 @media (max-width: 768px) {
   .tabs {
+    margin-top: 0;
     position: fixed;
     bottom: 0;
     left: 0;
