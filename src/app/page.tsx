@@ -224,18 +224,21 @@ export default function Home() {
           <Grid container spacing={3} sx={{ mt: 5, mb: 2, mr: 0, pl: 2, pr: 2  }}>
             <Grid item md={7} xs={12}>
               <Typography variant="body2" align="justify">
-              Após a nossa jornada em aprender sobre o que é clima organizacional e a sua importância nas primeiras aulas, e também, sobre como planejar a nossa pesquisa no módulo 2, e como aplicar esta pesquisa no módulo 3, chegamos ao último módulo.
+              A conscientização dos funcionários é crucial para o sucesso da pesquisa de clima organizacional. É fundamental que os colaboradores entendam a importância da pesquisa e seus benefícios, já que ela serve como uma ferramenta para melhorar o ambiente de trabalho.
+              Quanto mais sinceras forem as respostas, mais precisos serão os resultados, por isso e essencial incentivar a participação de todos.
               <br/><br/>
-              No módulo 4 abordaremos sobre a análise e interpretação dos resultados da pesquisa de clima organizacional, culminando na elaboração de um relatório de devolutiva após coletar e análise dos dados através do questionário ECO, pois é fundamental realizar uma análise de forma simples e sistemática.
-            </Typography>
+              Um maior número de respostas oferece um retrato mais fiel do clima organizacional, permitindo à empresa identificar problemas e áreas de melhoria. Uma participação ampla resulta em um cenário mais realista, o que facilita a implementação de ações eficazes.
+              Por fim, garantir o anonimato dos respondentes é fundamental para que se sintam à vontade para responder honestamente.
+              <br/><br/>
+              O próximo módulo abordará a análise e interpretação dos resultados da pesquisa.</Typography>
             </Grid>
             <Grid item md={5} xs={12}>
               <SubTitle>O que você vai aprender nesse modulo:</SubTitle>
               <Typography variant="body2" component="ul" align="justify" sx={{ mr: 0 }}>
-                <li>Como realizar a análise dos dados.</li>
-                <li>Interpretação dos resultados obtidos.</li>
-                <li>Processo de produção de relatório.</li>
-                <li>Análise de dados.</li>
+                <li>Meios de divulgação da pesquisa;</li>
+                <li>Conscientização dos funcionários.</li>
+                <li>Incentivo a participação</li>
+                <li>Importância da garantia do anonimato.</li>
               </Typography>
             </Grid>
           </Grid>
@@ -246,22 +249,18 @@ export default function Home() {
           <Grid container  spacing={3} sx={{ mt: 5, mb: 2, mr: 0, pl: 2, pr: 2  }}>
             <Grid item md={7} xs={12}>
               <Typography variant="body2" align="justify">
-              A conscientização dos funcionários é crucial para o sucesso da pesquisa de clima organizacional. É fundamental que os colaboradores entendam a importância da pesquisa e seus benefícios, já que ela serve como uma ferramenta para melhorar o ambiente de trabalho.
-              Quanto mais sinceras forem as respostas, mais precisos serão os resultados, por isso e essencial incentivar a participação de todos.
+              Após a nossa jornada em aprender sobre o que é clima organizacional e a sua importância nas primeiras aulas, e também, sobre como planejar a nossa pesquisa no módulo 2, e como aplicar esta pesquisa no módulo 3, chegamos ao último módulo.
               <br/><br/>
-              Um maior número de respostas oferece um retrato mais fiel do clima organizacional, permitindo à empresa identificar problemas e áreas de melhoria. Uma participação ampla resulta em um cenário mais realista, o que facilita a implementação de ações eficazes.
-              Por fim, garantir o anonimato dos respondentes é fundamental para que se sintam à vontade para responder honestamente.
-              <br/><br/>
-              O próximo módulo abordará a análise e interpretação dos resultados da pesquisa. 
+              No módulo 4 abordaremos sobre a análise e interpretação dos resultados da pesquisa de clima organizacional, culminando na elaboração de um relatório de devolutiva após coletar e análise dos dados através do questionário ECO, pois é fundamental realizar uma análise de forma simples e sistemática.
               </Typography>
             </Grid>
             <Grid item md={5} xs={12}>
               <SubTitle>O que você vai aprender nesse modulo:</SubTitle>
               <Typography variant="body2" component="ul" align="justify" sx={{ mr: 0 }}>
-                <li>Meios de divulgação da pesquisa;</li>
-                <li>Conscientização dos funcionários.</li>
-                <li>Incentivo a participação</li>
-                <li>Importância da garantia do anonimato.</li>
+                <li>Como realizar a análise dos dados.</li>
+                <li>Interpretação dos resultados obtidos.</li>
+                <li>Processo de produção de relatório.</li>
+                <li>Análise de dados.</li>
               </Typography>
             </Grid>
           </Grid>
