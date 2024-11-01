@@ -6,7 +6,7 @@ import StarsIcon from '@mui/icons-material/Stars';
 export default function Player(props: { videoUri: string, title: string, subTitle?: string }) {
   return (
     <>
-      <Typography variant="h2" component="h1" className='Title' fontWeight={700} sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}>
+      <Typography variant="h2" component="h1" className='Title' fontWeight={700} sx={{ display: "flex", alignItems: "center", justifyContent: "start", mb: 2 }}>
         {props.subTitle
           ? <Box className="subTitle" component="span">{props.subTitle} <StarsIcon /></Box>
           : <Box className="subTitle subTitleIcon" component="span"><StarsIcon /></Box>

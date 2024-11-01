@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import { Montserrat } from 'next/font/google'
 import { Tabs, Tab, Typography, Box, Grid, Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { teal, grey } from '@mui/material/colors';
@@ -8,6 +9,15 @@ import PersonIcon from '@mui/icons-material/Person';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import SubTitle from './SubTitle';
 import Player from './Player';
+import Footer from './Footer';
+import Image from 'next/image';
+
+const montserrat = Montserrat({
+  weight: ['500', '800'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const TabPanel = (props: { children: React.ReactNode, value: number, index: number}) => {
   const { children, value, index} = props;
@@ -34,6 +44,19 @@ export default function Home() {
   };
 
   const theme = createTheme({
+    typography: {
+      fontFamily: [
+        montserrat.style.fontFamily,
+        '-apple-system',
+        'Roboto',
+        '"Helvetica Neue"',
+        '"Segoe UI"',
+        'Arial',
+        'sans-serif',
+      ].join(','),
+      fontWeightRegular: 500,
+      fontWeightBold: 800,
+    },
     palette: {
       primary: {
         main: teal[300],
@@ -76,17 +99,17 @@ export default function Home() {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 2 }} >
-            Bem-vindos ao nossos vídeos sobre Pesquisa de Clima Organizacional! 
+          <Typography variant="h2" component="h1" align="center" fontSize="2.50rem" fontWeight={700} sx={{ mb: 4 }} >
+          Bem-vindo ao nosso curso sobre Pesquisa de Clima Organizacional!
           </Typography>
-          <span className="aspect-box">
-            <img alt="" src="./organizacional.png" />
-          </span>
-          <Grid container spacing={2} sx={{ mt: 5}}>
-            <Grid item md={12} xs={12} sx={{ m: 2, mt: 5, mr: 0 }}>
+          <Grid container spacing={2} mb={3}>
+            <Grid item md={6} xs={12} style={{ marginBottom: '32px'}}>
+              <Box className="aspect-box">
+                <img alt="" src="./organizacional.png" />
+              </Box>
+            </Grid>
+            <Grid item md={6} xs={12} style={{ paddingLeft: '32px' }}>
               <Typography variant="body2" align="justify">
-              Bem-vindo ao nosso curso sobre Pesquisa de Clima Organizacional!<br /><br />
-
               Neste curso, você irá explorar as ferramentas e técnicas essenciais para avaliar e entender o ambiente de trabalho em qualquer organização.<br /><br />
 
               A pesquisa de clima organizacional é crucial para identificar áreas de melhoria, promover a satisfação dos colaboradores e aumentar a produtividade.
@@ -95,11 +118,63 @@ export default function Home() {
               </Typography>
             </Grid>
           </Grid>
+          <Box sx={{ height: '257px', marginBottom: '-257px', overflow: 'hidden', zIndex: -1, position: 'relative' }}>
+            <svg style={{ position: 'relative', top: '-50%', transform: 'scale(1,0.6)'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 804">
+              <path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="19" d="m20 417 1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h2l1 1h1l1 1h2l1 1h2l1 1h1l1 1h2l1 1h2l1 1h2l1 1h3l1 1h2l1 1h3l1 1h3l1 1h3l1 1h3l1 1h5l1 1h5l1 1h6l1 1h9l1 1h28l1-1h10l1-1h6l1-1h5l1-1h4l1-1h4l1-1h3l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h1l1-1h2l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h2l1-1h1l1-1h1l1-1h1l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h3l1-1h3l1-1h4l1-1h4l1-1h5l1-1h6l1-1h10l1-1h27l1 1h10l1 1h6l1 1h5l1 1h4l1 1h4l1 1h3l1 1h3l1 1h3l1 1h2l1 1h2l1 1h2l1 1h3l1 1h1l1 1h2l1 1h2l1 1h2l1 1h1l1 1h2l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1 1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1 1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h2l1 1h2l1 1h1l1 1h2l1 1h2l1 1h2l1 1h2l1 1h2l1 1h3l1 1h3l1 1h2l1 1h4l1 1h3l1 1h4l1 1h5l1 1h7l1 1h9l1 1h28l1-1h9l1-1h7l1-1h5l1-1h4l1-1h3l1-1h3l1-1h3l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h1l1-1h2l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1 1-1h1l1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1h1l1-1 1-1 1-1" paintOrder="fill stroke markers"/>
+            </svg>
+          </Box>
+          <Grid  container spacing={2} mb={3}>
+            <Grid item sm={3} xs={6}>
+              <Box className="photo-box" mb={2}>
+                <img alt="Alexia" src="./1.jpeg" />
+              </Box>
+              <Typography align="center">Alexia</Typography>
+            </Grid>
+            <Grid item sm={3} xs={6}>
+              <Box className="photo-box" mb={2}>
+                <img alt="Gabriele" src="./2.jpeg" />
+              </Box>
+              <Typography align="center">Gabriele</Typography>
+            </Grid>
+            <Grid item sm={3} xs={6}>
+              <Box className="photo-box" mb={2}>
+                <img alt="Giovana" src="./3.jpeg" />
+              </Box>
+              <Typography align="center">Giovana</Typography>
+            </Grid>
+            <Grid item sm={3} xs={6}>
+              <Box className="photo-box" mb={2}>
+                <img alt="Iza" src="./4.jpeg" />
+              </Box>
+              <Typography align="center">Iza</Typography>
+            </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <Player title="Introdução ao treinamento" videoUri="5y7j0lRQbAI" />
+          <Player subTitle="Introdução" title="Objetivos do Curso" videoUri="5y7j0lRQbAI" />
+          <Grid container spacing={4}>
+            <Grid item md={6} xs={12}>
+              <Typography align="justify">
+                Como objetivo do curso, buscaremos explorar as ferramentas e técnicas essenciais para avaliar
+                e entender o ambiente de trabalho, em qualquer organização através da pesquisa de clima,
+                que é crucial para identificar áreas de melhoria, promover a satisfação dos colaboradores e aumentar a produtividade.
+              </Typography>
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <Typography align="justify">
+                Nossos objetivos serão te ensinar a identificar a diferença entre pesquisa de clima organizacional e de satisfação,
+                definir os objetivos da pesquisa de clima, escolher instrumentos validados e compatíveis com a necessidade da empresa,
+                apresentar as dimensões a serem avaliadas, a melhor forma de divulgar e aplicar a pesquisa, e como realizar é analisar os resultados obtidos. 
+              </Typography>
+            </Grid>
+          </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+        <Player subTitle="Aula 1" title="O que é pesquisa de Clima Organizacional" videoUri="niXm6oYQArU" />
+        <Player subTitle="Aula 2" title="Pesquisa de satisfação ou Pesquisa de Clima" videoUri="3FbkxUZ_DQ0" />
+        <Player subTitle="Aula 3" title="Objetivo da pesquisa de Clima Organizacional" videoUri="h_rXB3D2fgg" />
           <Grid container spacing={2} sx={{ mt: 5}}>
-            <Grid item md={6} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
+          <Grid item md={6} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
               <Typography variant="body2" align="justify">
                 O clima organizacional refere-se às percepções compartilhadas dos membros de uma organização sobre o ambiente de trabalho, influenciadas por fatores como comunicação, liderança e práticas de gestão.
                 Um clima positivo promove satisfação, motivação e produtividade, enquanto um clima negativo pode levar ao desengajamento e rotatividade.<br/><br/>
@@ -116,29 +191,6 @@ export default function Home() {
                 <li>Qual a diferença entre uma pesquisa de clima organizacional e uma pesquisa de satisfação.</li>
                 <li>A importância das pesquisas de clima para identificar áreas de melhoria e otimização do desempenho organizacional.</li>
                 <li>Os objetivos da pesquisa de clima organizacional.</li>
-              </Typography>
-            </Grid>
-          </Grid>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-        <Player subTitle="Aula 1" title="O que é pesquisa de Clima Organizacional" videoUri="niXm6oYQArU" />
-        <Player subTitle="Aula 2" title="Pesquisa de satisfação ou Pesquisa de Clima" videoUri="3FbkxUZ_DQ0" />
-        <Player subTitle="Aula 3" title="Objetivo da pesquisa de Clima Organizacional" videoUri="h_rXB3D2fgg" />
-          <Grid container spacing={2} sx={{ mt: 5}}>
-            <Grid item md={7} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
-              <Typography variant="body2" align="justify">
-              Neste módulo, abordaremos o planejamento da pesquisa de clima nas organizações, começando pela definição dos objetivos específicos da pesquisa. Os objetivos incluem identificar a diferença entre pesquisa de clima organizacional e de satisfação, escolher instrumentos validados, apresentar dimensões a serem avaliadas, divulgar e aplicar a pesquisa.
-              <br/><br />
-              Focaremos na escala ECO (Escala de Clima Organizacional), por ser válida e fidedigna, assegurando dados confiáveis por meio de testes psicométricos, sendo uma ferramenta multidimensional que avalia aspectos como liderança, comunicação e relacionamento entre colegas.
-            </Typography>
-            </Grid>
-            <Grid item md={5} xs={12} sx={{ mt: 5, mb: 2, mr: 0 }}>
-              <SubTitle>O que você vai aprender hoje:</SubTitle>
-              <Typography variant="body2" component="ul" align="justify" sx={{ mr: 0 }}>
-                <li>Meios de divulgação da pesquisa.</li>
-                <li>Conscientização dos funcionários.</li>
-                <li>Incentivo à participação.</li>
-                <li>Importância da garantia do anonimato.</li>
               </Typography>
             </Grid>
           </Grid>
@@ -216,7 +268,6 @@ export default function Home() {
           </Typography>
           <Box display="flex" justifyContent="center">
             <Button
-              role={undefined}
               variant="contained"
               tabIndex={-1}
               startIcon={<ChecklistIcon />}
@@ -226,18 +277,23 @@ export default function Home() {
               Preencher Avaliação
             </Button>
           </Box>
-          <Grid container spacing={2} sx={{ mt: 5}}>
-            <Grid item md={12} xs={12} sx={{ m: 2, mt: 5, mr: 0 }}>
+          <Grid container spacing={4} sx={{ mt: 4, mb: 3 }}>
+            <Grid item sm={6} xs={12}>
               <Typography variant="body2" align="justify">
-              Agora que você completou as aulas do nosso treinamento sobre Pesquisa de Clima Organizacional, chegou o momento de realizar a Avaliação.
-              Esta avaliação tem como objetivo entender sua experiência, identificar áreas de melhoria e garantir que os conteúdos apresentados atendam às suas expectativas e necessidades.
-              As respostas do formulário são coletadas de forma anônima, garantindo o total sigilo dos participantes.<br/><br/>
-              Agradecemos imensamente por sua participação! Sua colaboração é essencial para o sucesso do nosso curso.
-              Muito obrigado por dedicar seu tempo e percorrer conosco nesta jornada.
+                Agora que você completou as aulas do nosso treinamento sobre Pesquisa de Clima Organizacional, chegou o momento de realizar a Avaliação.
+                Esta avaliação tem como objetivo entender sua experiência, identificar áreas de melhoria e garantir que os conteúdos apresentados atendam às suas expectativas e necessidades.
+              </Typography>
+            </Grid>
+            <Grid item sm={6} xs={12}>
+              <Typography variant="body2" align="justify">
+                As respostas do formulário são coletadas de forma anônima, garantindo o total sigilo dos participantes.
+                Agradecemos imensamente por sua participação! Sua colaboração é essencial para o sucesso do nosso curso.
+                Muito obrigado por dedicar seu tempo e percorrer conosco nesta jornada.
               </Typography>
             </Grid>
           </Grid>
         </TabPanel>
+        <Footer />
       </Box>
     </Grid>
     </ThemeProvider>
