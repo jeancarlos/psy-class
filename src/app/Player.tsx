@@ -7,10 +7,7 @@ export default function Player(props: { videoUri: string, title: string, subTitl
   return (
     <>
       <Typography variant="h2" component="h1" className='Title' fontWeight={700} sx={{ display: "flex", alignItems: "center", justifyContent: "start", mb: 2 }}>
-        {props.subTitle
-          ? <Box className="subTitle" component="span">{props.subTitle} <StarsIcon /></Box>
-          : <Box className="subTitle subTitleIcon" component="span"><StarsIcon /></Box>
-        }
+        <Box className="subTitle" component="span">{props.subTitle} <StarsIcon /></Box>
         {props.title}
       </Typography>
       <Box className="aspect-box" sx={{ mb: 6 }}>

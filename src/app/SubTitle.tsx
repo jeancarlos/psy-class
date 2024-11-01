@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 
 export default function SubTitle(props: { children: React.ReactNode }) {
@@ -21,10 +21,9 @@ export default function SubTitle(props: { children: React.ReactNode }) {
     zIndex: 1
   }
   return (
-    <Typography variant="h3" component="h2" fontSize='23px' fontWeight={700} sx={{ mb: 3 }}>
-      <span style={{position: "relative", display: 'block', width: '40px', height: '40px', marginRight: '10px', float: 'left'}}>
-        <NewReleasesIcon sx={sx}/><NewReleasesIcon sx={{ ...sx, ...sx2 }}/>
-      </span> {props.children}
+    <Typography variant="h3" component="h2" fontSize='18px' fontWeight={700} sx={{ mb: 3, display: 'flex', alignItems: 'center' }}>
+      <Box className="subTitle subTitleIcon" component="span"><NewReleasesIcon /></Box>
+      <span>{props.children}</span>
     </Typography>
   );
 }

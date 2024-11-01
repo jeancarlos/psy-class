@@ -18,7 +18,7 @@ export default function Footer() {
       >
         <Grid container spacing={2} className="layerBottom">
           <Grid item sm={7} xs={12}>
-            <Box
+            <Typography
               className="contactBox"
               sx={{
                 display: "flex",
@@ -32,7 +32,7 @@ export default function Footer() {
                 display="inline-flex"
               >
                 <EmailIcon />
-                <span>contato</span>
+                <span>Contato</span>
               </Box>
               <Box
                 className="subTitle email"
@@ -41,7 +41,7 @@ export default function Footer() {
               >
                 <span>treinamentopesquisaclimapsi@gmail.com</span>
               </Box>
-            </Box>
+            </Typography>
           </Grid>
           <Grid item sm={5} xs={12}>
             <Typography align="right" fontStyle="italic" fontSize="14px">
