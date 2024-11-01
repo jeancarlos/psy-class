@@ -10,7 +10,6 @@ import ShowChartIcon from '@mui/icons-material/ShowChart';
 import SubTitle from './SubTitle';
 import Player from './Player';
 import Footer from './Footer';
-import Image from 'next/image';
 
 const montserrat = Montserrat({
   weight: ['500', '800'],
